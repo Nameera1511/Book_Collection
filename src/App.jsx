@@ -23,7 +23,10 @@ function App() {
 
   return (
     <>
-     <RouterProvider router={router}/>
+    <div className='bg-yellow-50 h-auto'>
+      <RouterProvider router={router}/>
+    </div>
+     
     </>
   )
 }

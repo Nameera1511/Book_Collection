@@ -21,7 +21,7 @@ const Bookview = () => {
     <div className="p-6">
       <h1 className="text-2xl font-bold">{book.volumeInfo?.title}</h1>
       <p className="font-bold my-6">By: {book.volumeInfo?.authors?.join(", ")}</p>
-      <p className="my-6 ">Description: <br/> {book.volumeInfo?.description}</p>
+      <p className="my-6 ">Description: {book.volumeInfo?.description}</p>
       {book.volumeInfo?.imageLinks?.thumbnail && (
         <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} />
       )}
