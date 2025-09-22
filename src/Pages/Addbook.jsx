@@ -36,9 +36,10 @@ const handleChange=(e)=>{
  
     <form  onSubmit={handleSubmit} className='flex flex-col justify-center items-center gap-4 lg:w-[60%] h-[400px] md:w-[80%] sm:w-[80%] md:p-0 sm:p-0 bg-gray-700 rounded-lg '> 
        <div className='flex flex-col gap-5 justify-center items-center '>
-    <input type="text" placeholder='Enter BookName' onChange={handleChange} value={book.bookname} name='bookname' className=' sm:w-[70%] h-10 lg:w-[100%]  md:w-[80%] text-center text-white border-2 border-amber-700 rounded-md' />
-    <input type="text" placeholder='Enter AuthorName'onChange={handleChange} value={book.authorname} name='authorname' className=' sm:w-[70%]  h-10 lg:w-[100%] my-5 md:w-[80%]  text-center text-white border-2 border-amber-700 rounded-md'/>
-    <input type="text" placeholder='Enter Sale Info'onChange={handleChange} value={book.saleinfo} name='saleinfo' className=' sm:w-[70%]  h-10 lg:w-[100%]   md:w-[80%]   text-center text-white border-2 border-amber-700 rounded-md'/>
+    <input type="text" placeholder='Enter BookName' onChange={handleChange} value={book.bookname} name='bookname' className='w-[70%] sm:w-[70%] h-10 lg:w-[100%]  md:w-[80%] text-center text-white border-2 border-amber-700 rounded-md' />
+    <input type="text" placeholder='Enter AuthorName'onChange={handleChange} value={book.authorname} name='authorname' className='w-[70%]  sm:w-[70%]  h-10 lg:w-[100%] my-5 md:w-[80%]  text-center text-white border-2 border-amber-700 rounded-md'/>
+    <input type="text" placeholder='Enter Sale Info'onChange={handleChange} value={book.saleinfo} name='saleinfo' className='w-[70%] sm:w-[70%]  h-10 lg:w-[100%]   md:w-[80%]   text-center text-white border-2 border-amber-700 rounded-md'/>
+    
     <button type='submit'  className='h-10 w-30 bg-blue-900 rounded-xl my-10  text-white' >Save</button>
     </div>
 </form>
