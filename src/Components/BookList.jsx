@@ -18,12 +18,12 @@ const BookList = ({ books = [] }) => {
 
   return (
 
-    <div className="grid  gap-9  m-20  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 h-auto" >
+    <div className="grid  gap-9  m-20  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-auto" >
       {books.map((book) => (
-        <div key={book.id} className="border p-4 rounded shadow bg-gray-400">
+        <div key={book.id} className=" p-4 rounded  bg-gray-400 shadow-md shadow-gray-500">
           <div className="flex h-10 w-[100%] gap-5  justify-between ">
              <Link to={`/book/${book.id}`}>
-            <button className="bg-gray-700 rounded-md sm:h-6 sm:w-[120%] lg:h-9 lg:w-[30%] lg:text-lg w-25 text-white sm:text-sm" >View Detail</button>
+            <button className="bg-gray-700 rounded-md sm:h-6 sm:w-[120%] lg:h-9 lg:w-[120%] lg:text-lg w-25 text-white sm:text-sm" >View Detail</button>
             </Link>
             <button className="h-6 w-[30%] " onClick={() => toggleFav(book.id)}><FaHeart className={fav.includes(book.id) ? "text-red-900 lg:h-8 lg:w-8   sm:h-6 sm:w-6  h-7 w-7" : "text-gray-700 lg:h-8 lg:w-8 sm:h-6 sm:w-6 h-7 w-7 " } /></button>
           </div>
