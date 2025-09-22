@@ -8,7 +8,8 @@ const Addbook = () => {
   })
  const [item , setItem] = useState([])
 
-function handleSubmit(){
+function handleSubmit(e){
+   e.preventDefault();
  if (book !== ""){     
       setItem([...item, book]);       
       setBook("");                        
