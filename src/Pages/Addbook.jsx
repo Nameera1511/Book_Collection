@@ -12,8 +12,17 @@ function handleSubmit(e){
    e.preventDefault();
  if (book !== ""){     
       setItem([...item, book]);       
-      setBook("");                        
-    }
+      setBook({
+        bookname: "",
+    authorname : "",
+    saleinfo : ""
+      })                       
+    
+      alert(`Save successfully \n 
+    BookName : ${book.bookname}\n 
+    AuthorName : ${book.authorname} \n 
+    SaleInfo : ${book.saleinfo}`)
+      }
 }
 const handleChange=(e)=>{
   setBook({...book ,
@@ -21,10 +30,7 @@ const handleChange=(e)=>{
     )
 }
 function savehandle(){
-  alert(`Save successfully \n 
-    BookName : ${book.bookname}\n 
-    AuthorName : ${book.authorname} \n 
-    SaleInfo : ${book.saleinfo}`)
+
 
 }
   return (
@@ -35,7 +41,7 @@ function savehandle(){
     <input type="text" placeholder='Enter BookName' onChange={handleChange} value={book.bookname} name='bookname' className=' sm:w-[70%] h-10 lg:w-[100%]  md:w-[80%] text-center text-white border-2 border-amber-700 rounded-md' />
     <input type="text" placeholder='Enter AuthorName'onChange={handleChange} value={book.authorname} name='authorname' className=' sm:w-[70%]  h-10 lg:w-[100%] my-5 md:w-[80%]  text-center text-white border-2 border-amber-700 rounded-md'/>
     <input type="text" placeholder='Enter Sale Info'onChange={handleChange} value={book.saleinfo} name='saleinfo' className=' sm:w-[70%]  h-10 lg:w-[100%]   md:w-[80%]   text-center text-white border-2 border-amber-700 rounded-md'/>
-    <button className='h-10 w-30 bg-blue-900 rounded-xl my-10  text-white' onClick={savehandle}>Save</button>
+    <button type='button'  className='h-10 w-30 bg-blue-900 rounded-xl my-10  text-white' onClick={savehandle}>Save</button>
     </div>
 </form>
   </div>
