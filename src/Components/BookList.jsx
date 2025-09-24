@@ -21,7 +21,7 @@ const BookList = ({ books = [] }) => {
     <div className="grid  gap-6    m-5        sm:20   md:m-20 lg:m-20  grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 mb-auto" >
       {books.map((book) => (
         <div key={book.id} className=" rounded  bg-gray-400 shadow-md shadow-gray-500  w-[100%]">
-          <div className="flex h-10 w-[100%] gap-3   m-4">
+          <div className="flex h-10 w-[100%] gap-3 lg:gap-40  m-4">
              <Link to={`/book/${book.id}`}>
             <button className="bg-gray-700 rounded-md sm:h-6 sm:w-[120%] lg:h-9 lg:w-[120%] lg:text-lg w-22 h-8 text-sm text-white sm:text-sm" >View Detail</button>
             </Link>
