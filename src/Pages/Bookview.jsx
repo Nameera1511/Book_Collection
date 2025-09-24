@@ -16,7 +16,11 @@ const Bookview = () => {
     fetchBook();
   }, [id]);
 
-  if (!book) return <div className="border-6 border-solid border-gray-400 rounded-4xl w-10 h-10 animate-spin  mx-150 my-40 border-t-indigo-500"></div>;
+  if (!book) return (
+  <div className="flex justify-center items-center h-screen">
+    <div className="w-12 h-12 border-4 border-gray-400 border-t-indigo-500 rounded-full animate-spin"></div>
+  </div>
+);
 
   return (
     <div className="p-6">
