@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import functionApi from "../Components/ApiDisplay";
 
 const Bookview = () => {
   const { id } = useParams(); 
@@ -7,8 +8,8 @@ const Bookview = () => {
 
   useEffect(() => {
     const fetchBook = async () => {
-      const res = await fetch(`https://www.googleapis.com/books/v1/volumes/${id}`);
-      const data = await res.json();
+      const data = await functionApi(id);
+   
       setBook(data);
     };
 
