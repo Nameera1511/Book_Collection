@@ -18,20 +18,20 @@ const BookList = ({ books = [] }) => {
 
   return (
 
-    <div className="grid  gap-9  m-20  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-auto" >
+    <div className="grid  gap-6    m-5        sm:20   md:m-20 lg:m-20  grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 mb-auto" >
       {books.map((book) => (
-        <div key={book.id} className=" p-4 rounded  bg-gray-400 shadow-md shadow-gray-500">
-          <div className="flex h-10 w-[100%] gap-5  justify-between ">
+        <div key={book.id} className=" rounded  bg-gray-400 shadow-md shadow-gray-500  w-[100%]">
+          <div className="flex h-10 w-[100%] gap-5  justify-between m-4">
              <Link to={`/book/${book.id}`}>
-            <button className="bg-gray-700 rounded-md sm:h-6 sm:w-[120%] lg:h-9 lg:w-[120%] lg:text-lg w-25 text-white sm:text-sm" >View Detail</button>
+            <button className="bg-gray-700 rounded-md sm:h-6 sm:w-[120%] lg:h-9 lg:w-[120%] lg:text-lg w-22 text-sm text-white sm:text-sm" >View Detail</button>
             </Link>
-            <button className="h-6 w-[30%] " onClick={() => toggleFav(book.id)}><FaHeart className={fav.includes(book.id) ? "text-red-900 lg:h-8 lg:w-8   sm:h-6 sm:w-6  h-7 w-7" : "text-gray-700 lg:h-8 lg:w-8 sm:h-6 sm:w-6 h-7 w-7 " } /></button>
+            <button className="h-6 w-[20%] mr-20" onClick={() => toggleFav(book.id)}><FaHeart className={fav.includes(book.id) ? "text-red-900 lg:h-8 lg:w-8   sm:h-6 sm:w-6  h-5 w-5" : "text-gray-700 lg:h-8 lg:w-8 sm:h-6 sm:w-6 h-7 w-7 " } /></button>
           </div>
           {book.volumeInfo?.imageLinks?.thumbnail && (
             <img
               src={book.volumeInfo.imageLinks.thumbnail}
               alt={book.volumeInfo.title}
-              className="mt-2 lg:h-50 lg:w-70  sm:h-20 sm:w-40    mx-4 rounded-md"
+              className="mt-2 lg:h-50 lg:w-70  sm:h-20 sm:w-40  h-15 w-30  mx-4 rounded-md"
             />
           )}
           <h2 className="font-bold  mx-5 my-4 text-gray-900">{book.volumeInfo?.title}</h2>
