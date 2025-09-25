@@ -15,7 +15,7 @@ function App() {
          <Route index element={<Home/>}/>
        <Route path='Addbook' element={<Addbook/>}/>
         <Route path='Contact' element={<Contact/>}/>
-        <Route path="book/:id" element={<Bookview />} />
+        <Route path="book/:id" element={<Bookview />} caseSensitive={false}/>
        
       </Route>
     )

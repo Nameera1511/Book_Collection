@@ -47,7 +47,7 @@ const BookList = ({ books = [] }) => {
             <img
               src={book.volumeInfo.imageLinks.thumbnail}
               alt={book.volumeInfo.title}
-              className="h-40 w-70 object-contain mb-4"
+              className="h-40  object-contain mb-4"
             />
           )}
 
