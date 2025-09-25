@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-yellow-50 max-h-screen min-h-screen'>
+    <div className='bg-yellow-50 max-h-screen min-h-screen '>
       <RouterProvider router={router}/>
     </div>
      

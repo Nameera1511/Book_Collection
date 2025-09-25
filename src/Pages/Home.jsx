@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <>
      
-        <div className='bg-yellow-50'>
+        <div className='bg-yellow-50 '>
     
       <BookList books={books} />
     </div>

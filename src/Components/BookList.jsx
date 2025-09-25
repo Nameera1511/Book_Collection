@@ -17,26 +17,47 @@ const BookList = ({ books = [] }) => {
   };
 
   return (
-
-    <div className="grid  gap-6    m-5        sm:20   md:m-20 lg:m-20  grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 mb-auto" >
+    <div className="grid gap-6 my-15 px-4 py-6 sm:px-10 sm:py-10 md:px-16 md:py-12 lg:px-20 lg:py-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {books.map((book) => (
-        <div key={book.id} className=" rounded  bg-gray-400 shadow-md shadow-gray-500  w-[100%]">
-          <div className="flex h-10 w-[100%] gap-3 lg:gap-40  m-4">
-             <Link to={`/book/${book.id}`}>
-            <button className="bg-gray-700 rounded-md sm:h-6 sm:w-[120%] lg:h-9 lg:w-[120%] lg:text-lg w-22 h-8 text-sm text-white sm:text-sm" >View Detail</button>
+        <div
+          key={book.id}
+          className="flex flex-col items-center justify-between bg-gray-200 shadow-lg rounded-lg p-5 hover:shadow-xl "
+        >
+          {/* Top buttons */}
+          <div className="flex justify-between items-center w-full mb-3">
+            <Link to={`/book/${book.id}`}>
+              <button className="bg-gray-700 px-3 py-1 text-white rounded-md text-sm sm:text-base ">
+                View Detail
+              </button>
             </Link>
-            <button className="h-6 w-[20%] " onClick={() => toggleFav(book.id)}><FaHeart className={fav.includes(book.id) ? "text-red-900 lg:h-8 lg:w-8   sm:h-6 sm:w-6  h-4 w-4" : "text-gray-700 lg:h-8 lg:w-8 sm:h-6 sm:w-6 h-5 w-5  " } /></button>
+
+            <button onClick={() => toggleFav(book.id)}>
+              <FaHeart
+                className={
+                  fav.includes(book.id)
+                    ? "text-red-600 w-6 h-6 sm:w-7 sm:h-7"
+                    : "text-gray-600 w-6 h-6 sm:w-7 sm:h-7"
+                }
+              />
+            </button>
           </div>
+
+          {/* Image */}
           {book.volumeInfo?.imageLinks?.thumbnail && (
             <img
               src={book.volumeInfo.imageLinks.thumbnail}
               alt={book.volumeInfo.title}
-              className="mt-2 lg:h-50 lg:w-70  sm:h-20 sm:w-40  h-20 w-30  mx-4 rounded-md"
+              className="h-40 w-70 object-contain mb-4"
             />
           )}
-          <h2 className="font-bold  mx-5 my-4 text-gray-900">{book.volumeInfo?.title}</h2>
-          <p className=" mx-5 my-2 text-gray-900">{book.volumeInfo?.authors?.join(", ")}</p>
 
+          {/* Title + Author */}
+          <h2 className="font-bold text-center text-gray-900 mb-2">
+            {book.volumeInfo?.title}
+          </h2>
+          <p className="text-sm text-gray-800 text-center">
+            {book.volumeInfo?.authors?.join(", ")}
+          </p>
         </div>
       ))}
     </div>

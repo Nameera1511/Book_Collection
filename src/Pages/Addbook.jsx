@@ -32,7 +32,7 @@ const handleChange=(e)=>{
 }
 
   return (
-<div className='w-[100%] p-12 flex  items-center justify-center'>
+<div className='w-[100%] p-12 flex  items-center justify-center my-15'>
  
     <form  onSubmit={handleSubmit} className='flex flex-col justify-center items-center gap-4 lg:w-[60%] h-[400px] md:w-[80%] sm:w-[80%] md:p-0 sm:p-0 bg-gray-700 rounded-lg '> 
        <div className='flex flex-col gap-5 justify-center items-center '>
